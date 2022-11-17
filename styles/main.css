@@ -41,3 +41,23 @@ body{
     margin-top: 15px;
     margin-left: 15px;
 }
+.main-offer{
+    margin-top: 75px;
+    margin-bottom: 75px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.main-heading{
+    margin-top: 0;
+    margin-bottom: 0;
+
+    font-size: 36px;
+    font-weight: normal;
+    color: white;
+}
+.main-heading > strong{
+    text-transform: uppercase;
+}
+.main-offer-price{
+    font-size: 72px;
+}
