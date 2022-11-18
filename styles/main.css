@@ -6,6 +6,7 @@ html{
 }
 
 body{
+    font-family: 'Montserrat', sans-serif;
     min-height: 100%;
 
     background-color: rgb(100, 100, 100);
@@ -44,14 +45,15 @@ body{
 .main-offer{
     margin-top: 75px;
     margin-bottom: 75px;
-    margin-left: 15px;
+    margin-left: 65px;
     margin-right: 15px;
 }
 .main-heading{
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 0px;
+    letter-spacing: 0.05em;
+    font-style: italic;
 
-    font-size: 36px;
+    font-size: 28px;
     font-weight: normal;
     color: white;
 }
@@ -59,5 +61,25 @@ body{
     text-transform: uppercase;
 }
 .main-offer-price{
-    font-size: 72px;
+    display: block;
+    font-size: 120px;
+    margin-top: 18px;
+}
+.join-today{
+    display: inline-block;
+    font-size: 28px;
+    background-color: black;
+    color: white;
+    border-radius: 9999px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 50px;
+    margin-top: 40px;
+}
+.join-today:hover{
+    background-color: rgb(50, 50, 50);
+}
+.footer-paragraph{
+    margin-top: 75px 0px 0px 15px;
+    color: black;
 }
