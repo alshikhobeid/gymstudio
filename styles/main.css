@@ -36,12 +36,19 @@ body{
 }
 .page{
     display: flex;
+    min-height: 100vh;
 }
 .main-content{
-    width: 40%;
+    flex: 0 0 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
 }
 .countdown{
-    width: 60%;
+    flex: 0 1 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .logo{
     width: 275px;
@@ -49,10 +56,8 @@ body{
     margin-left: 15px;
 }
 .main-offer{
-    margin-top: 75px;
-    margin-bottom: 75px;
-    margin-left: 65px;
-    margin-right: 15px;
+    margin: 100px 15px 100px 15px;
+    align-self: center;
 }
 .main-heading{
     margin: 0px;
@@ -86,11 +91,11 @@ body{
     background-color: rgb(50, 50, 50);
 }
 .footer-paragraph{
-    margin-top: 75px 0px 0px 15px;
+    margin-top: 15px 0px 15px 15px; 
     color: black;
 }
 .countdown-heading{
-    margin: 250px 0 0 0;
+    margin: 0;
     color: white;
     text-align: center;
     letter-spacing: 00.05em;
