@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+	<title>vw-vh-calc</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<style>
+/*
+calc = relative und absolute Werte verrechnen
+
+https://developer.mozilla.org/de/docs/Web/CSS/calc
+
+Die + und - Zeichen erfordern zwingend ein Leerzeichen zwischen dem Operator und den Werten. Bei einer Multiplikation oder Division spielt dies keine Rolle.
+
+* Multiplikation (Muss mindestens eine Zahl enthalten).
+/ Division (Divisor muss eine Zahl sein).
+
+		
+		
+http://www.drweb.de/magazin/neue-css-einheiten-fuer-responsive-designs-47490/
+
+- Die Einheiten „vw“ und „vh“ definieren eine Breite beziehungsweise Höhe in Relation zur Fenstergröße. Dabei steht „vw“ für „view width“ und „vh“ für „view height“. Diese sogenannten Viewport Units ermöglichen es, Größen in Relation zur jeweils aktuellen Größe des Browserfensters zu definieren.
+
+50vw legt die Größe eines Elementes auf 50 Prozent der Fensterbreite fest. Während prozentuale Angaben immer in Relation zum jeweiligen Elternelement stehen, ist die Angabe mit Viewport Units immer in Relation zur Fenstergröße.
+
+Neben den Einheiten „vw“ und „vh“ gibt es noch die Einheiten „vmin“ und „vmax“. Eine Angabe mit „vmin“ definiert eine Größe entweder in Relation zur Fensterbreite oder -höhe – je nachdem, welche Größe die kleinere ist. Ist die Breite des Browserfensters kleiner als die Höhe, wird bei „vmin“ die Breite genommen.
+
+Analog dazu gibt es „vmax“. Hierbei wird der jeweils größere Wert gewählt.
+
+		
+		
+*/
+		
+		
+		@font-face {
+		  font-family: Roboto400;
+		  src: url('fonts/roboto-v30-latin-regular.woff2') format('woff2'),
+			   url('fonts/roboto-v30-latin-regular.woff') format('woff');
+		}
+		@font-face {
+		  font-family: Roboto700;
+		  src: url('fonts/roboto-v30-latin-700.woff2') format('woff2'),
+			   url('fonts/roboto-v30-latin-700.woff') format('woff');
+		}
+		* { 
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		img {
+			max-width: 100%;
+			height: auto;
+			display: block;
+		}
+		html {
+			font: 1rem Roboto400, sans-serif;
+		}
+		h1,h2,h3,h4 {
+			font: 700 2rem Roboto700, sans-serif;
+		}
+		
+		#eins {
+			max-width: 900px;
+			margin: auto;
+			background: #eee;
+		}
+		img[src*="n1."] {
+			width: 50vw;
+		}
+		h1 {
+/*			font-size: 5vw;*/
+			font-size: calc(1rem + 3vw);
+		}
+		
+		#zwei {
+			background: url("img/web2000/aa18.jpg");
+			background-size: cover;
+			min-height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		#zwei > div {
+			background: rgba(255,255,255,0.5);
+			padding: 2%;
+		}
+	</style>
+</head>
+<body>
+	<article id="eins">
+		<h1>vw-vh-calc</h1>
+		<p><img src="img/n1.jpg" alt="Meer"></p>
+	</article>
+	<article id="zwei">
+		<div>
+			<h2>Italien</h2>
+			<p>Reisen mit dem Radel ...</p>
+		</div>
+	</article>
+</body>
+</html>
