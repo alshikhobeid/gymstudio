@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+<head>
+<title>meine erste Seite (max 60Zeichen - mehr als 3 Wörter)</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="Description" content="kurze Beschreibung der Site max. 150Zeichen">
+<meta name="Keywords" content="Wichtigster Begriff, Region, 10-30 keywords">
+<meta name="robots" content="noindex"> <!-- Seite für Suchmaschinen sperren / freigeben (index)--> 
+<!-- meta-Tags gehören auf jede Einzelseite! des Webprojektes -->
+</head>
+<body>
+<h1>SEO</h1>
+<pre>
+Volltextsuchmaschinen – Häufigkeit der Keywords im Text
+Wertigkeit: Title, h1-h6, linktext, title-/alt-Attribut von img, Domain
+h1 - wichtig - kreativ - nur 1x pro Seite
+
+Keyword-Dichte 2-4% zu viel ist nicht gut (Überoptimierung)!
+Keyword-Dichte ist nicht alles! - Mehrwert für Nutzer !!!
+strong statt b, em statt i => für Google besser als wichtig hervorgehoben
+
+https://neilpatel.com/de/ ????
+https://answerthepublic.com/ ????
+ 
+- html5!
+- responsive 
+- body - Textkörper möglichst über 350 Wörter
+- interne Links - mehr als 10
+- Links/Backlinks zu/von sozialen Netzwerken
+- Hierarchie der Überschriften einhalten
+- letztes update der Seiten
+- code/text-rate - Die Text Rate sollte über 25 % liegen.
+- Valider Code!
+- css/js in externe Dateien auslagern 3-4 Dateien (nicht zu viele)
+- css/js minimieren
+- Ladegeschwindigkeit
+
+strukturierte Daten 
+https://developers.google.com/search/docs/guides/intro-structured-data?hl=de
+
+Faktor Zeit
+https://www.theleverageway.com/blog/how-long-does-it-take-google-to-index-a-new-site/
+
+
+https://t3n.de/news/robotstxt-google-schafft-andere-1175830/
+https://www.youtube.com/watch?v=v6EjwLZikME (UD)
+- robots.txt 
+	# (root-Ebene ... da wo die index.html liegt)
+	# (muss nicht in html-Datei eingebunden werden)
+	
+	# Alles zulassen:
+	User-agent:*
+	Disallow:
+		
+	# Alles verbieten:
+	User-agent:*
+	Disallow:/
+	
+	# Bestimmte Ordner/Seiten sperren:
+	User-agent:*
+	Disallow:/geheim/
+	Disallow:/img/
+	Disallow:/fotos/hochzeitschulze.html
+	
+	# --------------------------------------------------------------
+	# Fotos in Google-Img-Suche -----------------------------------
+	User-Agent: Googlebot-Image
+	Disallow: /images/dogs.jpg 
+
+	User-Agent: Googlebot-Image
+	Disallow: / 
+
+	User-Agent: Googlebot-Image
+	Disallow: /*.gif$
+	# "*" eine beliebige Zeichenfolge anzugeben, oder ein 
+	# "$" am Ende einer Zeichenfolge, um das Ende eines Namens anzuzeigen.
+
+	
+	Seite testen:
+	http://seorch.de/pro.html
+	https://www.seobility.net/de/seocheck/
+	https://seo-summary.de/seo-tools-kostenlos/
+    
+    Testseiten - Google
+    https://googleseo.de/
+    http://developers.google.com
+	Webmastertools Google (Google Search Console)
+	site:domain.de
+
+	
+	XML-Sitemap
+	<?xml version="1.0" encoding="UTF-8"?>
+	<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+	 <url>
+	  <loc>http://example.com/</loc>  /* mit http:// und mit / am Ende! */
+	  <lastmod>2006-11-18</lastmod>
+	  <changefreq>daily</changefreq>
+	  <priority>0.8</priority>
+	 </url>
+	</urlset>
+	
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+   <url>
+      <loc>http://www.example.com/</loc>
+      <lastmod>2005-01-01</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+</urlset> 
+	
+	in robots.txt: 
+	Sitemap: sitemap.xml
+
+##	Minimalversion ############################################
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+   <url>
+      <loc>http://www.example.com/</loc>
+   </url>
+   <url>
+      <loc>http://www.example.com/wir.html/</loc>
+   </url>
+   <url>
+      <loc>http://www.example.com/kontakt.html/</loc>
+   </url>
+</urlset> 
+###############################################################
+	
+<urlset> 	erforderlich 	
+Fasst die Datei zusammen und verweist auf den aktuellen Protokollstandard.
+
+<url> 	erforderlich 	
+Übergeordnetes Tag für die einzelnen URL-Einträge. Die übrigen Tags sind diesem untergeordnet.
+
+<loc> 	erforderlich 	
+URL der Seite. Diese URL muss mit dem Protokoll beginnen (z.B. "http") und mit einem abschließenden Schrägstrich enden, sofern vom Webserver benötigt. Dieser Wert darf höchstens 2.048 Zeichen lang sein.
+
+<lastmod> 	Optional 	
+Datum der letzten Änderung der Datei. Dieses Datum sollte das W3C Datetime-Format aufweisen. Mit diesem Format können Sie die Uhrzeit weglassen und JJJJ-MM-TT verwenden.
+
+Dieses Tag ist vom "If-Modified-Since"-Header (304), den der Server zurückgeben kann, unabhängig. Suchmaschinen können die Informationen von beiden Quellen unterschiedlich verwenden.
+
+<changefreq> 	Optional 	
+Die Häufigkeit, mit der sich die Seite voraussichtlich ändern wird. Dieser Wert gibt Suchmaschinen allgemeine Informationen. Er steht nicht unbedingt mit der Häufigkeit in Zusammenhang, mit der Sie die Seite durchsuchen. Gültige Werte sind:
+
+    always
+    hourly
+    daily
+    weekly
+    monthly
+    yearly
+    never
+
+Der Wert "always" wird zur Beschreibung von Dokumenten verwendet, die sich bei jedem Zugriff verändern. Der Wert "never" dient zur Beschreibung archivierter URLs.
+
+Der Wert dieses Tags wird als Tipp aufgefasst, nicht als Befehl. Die Suchmaschinen-Crawler können diese Information zwar bei ihren Entscheidungen berücksichtigen, sie durchsuchen jedoch Seiten, die mit "hourly" gekennzeichnet sind, eventuell seltener als stündlich, oder Seiten, die mit "yearly" gekennzeichnet sind, häufiger als jährlich. Selbst mit "never" gekennzeichnete Seiten können von den Crawlern in regelmäßigen Zeitabständen durchsucht werden, um unerwartete Änderungen an solchen Seiten zu erkennen.
+
+<priority> 	Optional 	
+Die Priorität dieser URL gegenüber anderen URLs auf Ihrer Website. Gültige Werte liegen zwischen 0,0 und 1,0. Dieser Wert hat keinen Einfluss auf einen Vergleich Ihrer Seiten mit Seiten auf anderen Websites. Er informiert die Suchmaschinen lediglich darüber, welche Seiten für die Crawler die höchste Priorität haben.
+
+Die Standardpriorität einer Seite ist 0.5.
+
+Beachten Sie, dass die Priorität, die Sie einer Seite zuordnen, wahrscheinlich keinen Einfluss auf die Position Ihrer URLs in den Ergebnisseiten einer Suchmaschine hat. Diese Information wird unter Umständen von den Suchmaschinen lediglich zur Auswahl zwischen URLs derselben Website genutzt. Die Verwendung dieses Tags erhöht somit die Wahrscheinlichkeit, dass Ihre wichtigsten Seiten im Suchindex aufgeführt werden.
+
+Beachten Sie auch, dass es unsinnig ist, sämtlichen URLs Ihrer Website hohe Priorität zuzuordnen. Da die Priorität relativ ist, dient sie nur zur Auswahl zwischen URLs auf Ihrer Website.	
+
+</pre>
+</body>
+</html>
